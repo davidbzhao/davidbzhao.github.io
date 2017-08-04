@@ -1,6 +1,7 @@
 $(document).ready(function(){
     initLinks();
-    initMouseListeners();
+    initLinkMouseListeners();
+    initTextMouseListeners();
 })
 
 function initLinks(){
@@ -10,7 +11,7 @@ function initLinks(){
     });
 }
 
-function initMouseListeners(){
+function initLinkMouseListeners(){
     $('.link img').mouseenter(function(){
         $(this).stop(true).animate({
             'max-width': '90%',
@@ -21,6 +22,19 @@ function initMouseListeners(){
         $(this).stop(true).animate({
             'max-width': '80%',
             'max-height': '80%'
+        }, 200);
+    })
+}
+
+function initTextMouseListeners(){
+    $('#bottom p').mouseenter(function(){
+        $(this).stop(true).animate({
+            'letter-spacing':'15px'
+        }, 200);
+    })
+    $('#bottom p').mouseleave(function(){
+        $(this).stop(true).animate({
+            'letter-spacing':'10px'
         }, 200);
     })
 }
