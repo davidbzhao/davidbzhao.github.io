@@ -7,7 +7,7 @@ $(document).ready(function(){
 function initLinks(){
     $('.link img').parent().click(function(event){
         var link = $(this).data('href');
-        window.open(link);
+        window.open(link, '_self');
     });
 }
 
