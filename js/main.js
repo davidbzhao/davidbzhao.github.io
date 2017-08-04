@@ -5,7 +5,7 @@ $(document).ready(function(){
 })
 
 function initLinks(){
-    $('.link img').click(function(event){
+    $('.link img').parent().click(function(event){
         var link = $(this).data('href');
         window.open(link);
     });
